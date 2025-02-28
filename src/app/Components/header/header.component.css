@@ -1,0 +1,40 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  gap: 20px;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search-bar {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+}
+
+hr{
+  margin: 0 0 10px;
+}
