@@ -1,0 +1,48 @@
+<div class="product-details">
+
+  <div>
+    <div class="carousel">
+      <button (click)="prevImage()">&#10094;</button>
+      <img [src]="product?.image?.[currentIndex]" alt="{{ product?.name }}" class="carousel-image">
+      <button (click)="nextImage()">&#10095;</button>
+    </div>
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <span *ngFor="let img of product?.image; let i = index"
+            (click)="currentIndex = i"
+            [ngClass]="{'active': i === currentIndex}">
+      </span>
+    </div>
+  </div>
+  <!--product-details-->
+  <div>
+    <h5> {{ product!.name }}</h5>
+    <p>Price: <strong>{{ product!.price }} EGP</strong></p>
+    <p>Category: <strong> {{ product!.category }}</strong></p>
+
+    <p>Description: <strong> {{ product!.description }}</strong></p>
+    <button (click)="addToCart(product!)">Add to Cart</button>
+    <button (click)="goBack()" >Go Back</button>
+  </div>
+</div>
+<!--Related-Products-->
+<h3>Related Products</h3>
+
+<div class="products-container">
+  @for ( product of getRelatedProducts(); track product.id)
+  {
+      <div class="product" [routerLink]="['/product', product.id]">
+        <img [src]="product.image[0]"  alt="{{ product.name }}">
+        <div >
+          <h5>{{ product.name }}</h5>
+          <p>Category: <strong>{{ product.category }}</strong></p>
+          <p>Price: <strong>{{ product.price }} EGP</strong></p>
+          <button  (click)="addToCart(product);$event.stopPropagation()">Add to Cart</button>
+        </div>
+      </div>
+  }
+</div>
+
+
+
+

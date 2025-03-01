@@ -1,32 +1,14 @@
 <div class="cart-container">
 <div class="cart-icon">
-  <i class="fas fa-shopping-cart"></i>
-  <span class="cart-count">{{ cartItems.length }}</span>
+  <a [routerLink]="['/products/remove-from-cart']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+    <i class="fas fa-shopping-cart"></i>
+  </a>
+
+
+  <span class="cart-count">{{ getCartItemsLength() }}</span>
 </div>
 <div class="cart-total">
   <strong>Total:</strong> {{ getTotalPrice() }} EGP
 </div>
 </div>
-<!-- <div class="cart-container">
-  <div class="cart-icon">
-    <i class="fas fa-shopping-cart"></i>
-    <span class="cart-count">{{ cartItems.length }}</span>
-  </div>
-  <div class="cart-dropdown" *ngIf="cartItems.length > 0">
-    <ul class="cart-list">
-      <li *ngFor="let item of cartItems">
-        <img [src]="item.image" alt="{{ item.name }}" class="cart-item-img">
-        <div class="cart-item-info">
-          <p class="cart-item-name">{{ item.name }}</p>
-          <p class="cart-item-price">{{ item.price }} EGP</p>
-        </div>
-        <button class="remove-btn" (click)="removeFromCart(item)">
-          <i class="fas fa-trash"></i>
-        </button>
-      </li>
-    </ul>
-    <div class="cart-total">
-      <strong>Total:</strong> {{ getTotalPrice() }} EGP
-    </div>
-  </div>
-</div> -->
+

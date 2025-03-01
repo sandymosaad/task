@@ -38,3 +38,11 @@
 hr{
   margin: 0 0 10px;
 }
+
+img
+{
+  text-decoration: none;
+  margin: 0 5px;
+  cursor: pointer;
+}
+

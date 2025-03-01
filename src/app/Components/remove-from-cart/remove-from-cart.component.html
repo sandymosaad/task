@@ -1,0 +1,27 @@
+<div class="cart-container">
+  <div class="cart-icon">
+    <i class="fas fa-shopping-cart"></i>
+    <span class="cart-count">{{ cartItems.length }}</span>
+  </div>
+  <div class="cart-total">
+    <strong>Total:</strong> {{ getTotalPrice() }} EGP
+  </div>
+  <button (click)="goBack()" >Go Back</button>
+
+</div>
+<div class="products-container">
+  @for ( item of cartItems; track item.id){
+    <div class="product">
+      <img [src]="item.image[0]"  alt="{{ item.name }}">
+      <div >
+        <h5>{{ item.name }}</h5>
+        <p>Category: <strong>{{ item.category }}</strong></p>
+        <p>Price: <strong>{{ item.price }} EGP</strong></p>
+        <button class="remove-btn" (click)="removeFromCart(item)">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    </div>
+    }
+</div>
+

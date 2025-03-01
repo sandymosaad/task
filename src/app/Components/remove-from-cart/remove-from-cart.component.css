@@ -1,0 +1,31 @@
+.cart-icon{
+  color: #4CAF50;
+  font-size: 24px;
+  margin-right: 10px;
+}
+.cart-total{
+  color: #4CAF50;
+  font-size: 24px;
+  margin-right: 10px;
+}
+.cart-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  gap: 20px;
+  width: 500px;
+  margin: auto;
+}
+.fa-trash{
+  color: #4CAF50;
+  font-size: 36px;
+  margin-right: 10px;
+}
+.remove-btn{
+border: none;
+background: none;
+cursor: pointer;
+}
