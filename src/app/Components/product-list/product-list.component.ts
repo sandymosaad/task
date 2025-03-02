@@ -1,20 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../Services/product/product.service';
-
 import { Product } from '../../Types/product';
-import { FormsModule } from '@angular/forms';
 import { CartService } from '../../Services/cart/cart.service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule,
-    FormsModule,
+  imports: [
     RouterLink,
-
-
   ],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css'
@@ -26,7 +20,10 @@ export class ProductListComponent  implements OnInit{
   searchTerm: string = '';
 
 
-  constructor(private productService: ProductService, private CartService:CartService, private route: ActivatedRoute, private router: Router) {
+  constructor(private productService: ProductService,
+    private CartService:CartService,
+    private route: ActivatedRoute,
+    private router: Router) {
   }
 
   ngOnInit(){

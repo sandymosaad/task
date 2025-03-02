@@ -39,10 +39,11 @@ hr{
   margin: 0 0 10px;
 }
 
-img
+a, img
 {
   text-decoration: none;
   margin: 0 5px;
   cursor: pointer;
+  color:#4CAF50;
 }
 

@@ -1,12 +1,14 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CartSummaryComponent } from '../cart-summary/cart-summary.component';
 import { SearchComponent } from '../search/search.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [CartSummaryComponent,
-    SearchComponent
+    SearchComponent,
+    RouterLink
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'

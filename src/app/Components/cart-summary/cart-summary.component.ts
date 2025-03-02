@@ -35,8 +35,4 @@ export class CartSummaryComponent implements OnInit{
     return this.cartItemCount;
   }
 
-removeFromCart(item: Product) {
-  this.cartService.removeFromCart(item);
-}
-
 }

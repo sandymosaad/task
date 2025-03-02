@@ -23,14 +23,15 @@ export class ProductDetailsComponent implements OnInit {
   currentIndex = 0;
 
 
-
-  constructor( private route:ActivatedRoute, private productService: ProductService , private CartService: CartService ,private router: Router) { }
+  constructor( private route:ActivatedRoute,
+    private productService: ProductService ,
+    private CartService: CartService ,
+    private router: Router) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       const productID = params.get('id');
-      if (productID)
-        {
+      if (productID) {
           this.getProduct(parseInt(productID));
         }
       });
@@ -41,11 +42,7 @@ export class ProductDetailsComponent implements OnInit {
 
   getProduct(id: number) {
     this.product = this.productService.getProducts().find(product => product.id === id) || null;
-    // console.log("Product Data:", this.product);
-    // console.log("Image URL:", this.product?.image[0]);
   }
-
-
 
   nextImage()
   {

@@ -13,7 +13,8 @@ import { Router } from '@angular/router';
 export class RemoveFromCartComponent implements OnInit {
    cartItems: Product[] = [];
 
-  constructor( private cartService: CartService, private router: Router) { }
+  constructor( private cartService: CartService,
+    private router: Router) { }
 
   ngOnInit(){
     this.cartItems = this.cartService.getCartItems();
